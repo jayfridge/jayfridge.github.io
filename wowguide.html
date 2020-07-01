@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guide test</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        width: 900px;
+        margin: 0 auto;
+      }
+
+      .title {
+        font-size: 3.5rem;
+      }
+
+      .card {
+        transition: background-color 0.2s ease-in-out;
+        background-color: white;
+        padding: 0px;
+        border: solid 0.5px lightgray;
+        border-radius: 5px;
+        overflow: visible;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .col-2 {
+        flex: 2;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+
+      .col-10 {
+        flex: 10;
+        padding: 5px;
+      }
+
+      .col-12 {
+        flex: 1;
+      }
+
+      section {
+        margin-bottom: 5px;
+      }
+
+      .card:hover {
+        background-color: palegoldenrod;
+      }
+
+      .indicator {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        line-height: .5rem;
+      }
+
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(102, 102, 255);
+        text-decoration: underline;
+      }
+
+      .card p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .turn-in .quest::before {
+        content: '? ';
+        color: #ffba10;
+      }
+
+      .accept .quest::before {
+        content: '! ';
+        color: #ffba10;
+      }
+
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 220px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        text-align: left;
+        padding: 5px;
+        border-radius: 6px;
+
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+
+        border: solid silver 2px;
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+
+      .do .col-2 {
+        background-color: blue;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .turn-in .col-2 {
+        background-color: green;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .accept .col-2 {
+        background-color: violet;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .loot .col-2 {
+        background-color: blueviolet;
+        border-radius: 5px 0 0 5px;
+        flex: 1;
+      }
+
+      .loot .col-2 .indicator {
+        font-size: small;
+        line-height: 1px;
+      }
+
+      .kill .col-2 {
+        background-color: red;
+        border-radius: 5px 0 0 5px;
+        flex: 1;
+      }
+
+      .kill .col-2 .indicator {
+        font-size: medium;
+        line-height: 1px;
+      }
+
+      .hearthstone {
+        background-color: lightskyblue;
+        border-radius: 5px;
+      }
+
+      .resupply {
+        background-color: lightsalmon;
+        border-radius: 5px;
+      }
+
+      .quest {
+        color: rgb(226, 162, 0);
+        font-weight: 600;
+        border-bottom: 1px dotted black;
+      }
+
+      .item {
+        color: rgb(0, 226, 207);
+        font-weight: 600;
+        border-bottom: 1px dotted black;
+      }
+
+      .creature {
+        color: rgb(219, 50, 50);
+        font-weight: 600;
+        border-bottom: 1px dotted black;
+      }
+
+      .person {
+        color: blue;
+        font-weight: 600;
+        border-bottom: 1px dotted black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1 class="title">Guide test</h1>
+      <div style="margin-bottom: 15px;">
+        <h4>Legend</h4>
+        <span class="quest">Quest</span><br />
+        <span class="item">Item</span><br />
+        <span class="creature">Creature</span><br />
+        <span class="person">Person</span><br />
+      </div>
+      <section>
+        <div class="card do">
+          <div class="row">
+            <div class="col-2">
+              <h1 class="indicator">Do</h1>
+            </div>
+            <div class="col-10" style="padding-left: 10px;">
+              <a href="" class="quest">Qtitle</a>
+              <p>Description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="card turn-in">
+          <div class="row">
+            <div class="col-2">
+              <h1 class="indicator">Turn In</h1>
+            </div>
+            <div class="col-10" style="padding-left: 10px;">
+              <div class="tooltip">
+                <a href="" class="quest">Questtitle</a>
+                <div class="tooltiptext">
+                  <div style="font-weight: bold; color: rgb(241, 173, 0);">
+                    Questtitle
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card accept">
+          <div class="row">
+            <div class="col-2">
+              <h1 class="indicator">Accept</h1>
+            </div>
+            <div class="col-10" style="padding-left: 10px;">
+              <div class="tooltip">
+                <a href="" class="quest">Questtitle</a>
+                <div class="tooltiptext">
+                  <div style="font-weight: bold; color: rgb(241, 173, 0);">
+                    Questtitle
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card kill" style="margin-left: 150px;">
+          <div class="row">
+            <div class="col-2">
+              <span class="indicator">Kill</span>
+            </div>
+            <div class="col-10" style="padding-left: 10px;">
+              <div class="tooltip">
+                <a href="" class="quest">Questtitle</a>
+                <div class="tooltiptext">
+                  <div style="font-weight: bold; color: rgb(241, 173, 0);">
+                    Questtitle
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card kill" style="margin-left: 150px;">
+          <div class="row">
+            <div class="col-2">
+              <span class="indicator">Kill</span>
+            </div>
+            <div class="col-10" style="padding-left: 10px;">
+              <div class="tooltip">
+                <a href="" class="creature">Questtitle</a>
+                <div class="tooltiptext">
+                  <div style="font-weight: bold; color: rgb(241, 173, 0);">
+                    Questtitle
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card loot" style="margin-left: 150px;">
+          <div class="row">
+            <div class="col-2">
+              <span class="indicator">Loot</span>
+            </div>
+            <div class="col-10" style="padding-left: 10px;">
+              <div class="tooltip">
+                <a href="" class="quest">Questtitle</a>
+                <div class="tooltiptext">
+                  <div style="font-weight: bold; color: rgb(241, 173, 0);">
+                    Questtitle
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <div class="row">
+            <div class="col-12 hearthstone">
+              <h1 class="indicator">Hearthstone (Target Location)</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <div class="row">
+            <div class="col-12 resupply">
+              <h1 class="indicator">Resupply</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
