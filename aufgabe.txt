@@ -1,0 +1,19 @@
+- Website mit 4 Links zu anderen Seiten
+- Auf jeder der Seiten soll ein Link zurück zur Startseite angezeigt werden
+- Die 4 Seiten heißen Produkte, Karriere, Über uns, Impressum
+- Auf der Produktseite sollen 4 Produkte untereinander stehen
+  - dafür soll für jedes Produkt ein Platzhalterbild mit Platzhaltertext daneben angezeigt werden
+- Auf der Karriereseite sollen 4 Karriereoptionen untereinander stehen
+  - jede Karriereoption soll eine Überschrift haben und einen Beschreibungstext
+  - hier kann Platzhaltertext verwendet werden
+- Auf der Über-uns-Seite soll ein großes Foto von dem Team angezeigt werden (Platzhalter)
+  - unter dem Foto soll ein Beschreibungstext angezeigt werden
+- Auf der Impressumsseite soll eine Adresse angezeigt werden (Platzhalter)
+
+- Die Schriftart auf der gesamten Webseite soll Arial sein
+- Die Links auf der Webseite sollen dunkelrot sein
+- Nach dem Besuchen eines Links soll dieser seine Farbe nicht ändern
+- Die Hintergrundfarbe der gesamten Webseite soll hellgrau sein
+- Der Titel der Webseite soll "Superunternehmen GmbH" sein
+- Die maximale Breite der Webseite soll 800 Pixel sein
+- Die Webseite soll horizontal in der Mitte angezeigt werden
